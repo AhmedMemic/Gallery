@@ -11,11 +11,14 @@ class User {
     public static function find_all_users() {
         return self::find_this_query("SELECT * FROM users");
     }
-
+   
     public static function find_user_by_id($user_id) {
         global $database;
-        $result_set = self::find_this_query ("SELECT * FROM users WHERE id = $user_id LIMIT 1");
-        $found_user = mysqli_fetch_array($result_set);
+        $the_result_array = self::find_this_query ("SELECT * FROM users WHERE id = $user_id LIMIT 1");
+
+        return !empty($the_result_array) ? array_shift($the_result_array) : false;
+        // if  this from aboive         do  this from abovove            else  false   
+
         return $found_user;
     }
 
@@ -28,6 +31,18 @@ class User {
             $the_object_arrray[] = self::instantation($row);
         }
         return $the_object_arrray;
+    }
+
+    public static function verify_user($username, $password) {
+        global $database;
+
+        $username = $database->escape_string($username);
+        $password = $database->escape_string($password);
+
+        $sql = "SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}' LIMIT 1";
+
+        $the_result_array = self::find_this_query($sql);
+        return !empty($the_result_array) ? array_shift($the_result_array) : false;
     }
 
     public static function instantation($the_record) {
