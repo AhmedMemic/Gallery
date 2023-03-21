@@ -18,8 +18,6 @@ class User {
 
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
         // if  this from aboive         do  this from abovove            else  false   
-
-        return $found_user;
     }
 
     public static function find_this_query($sql) {
