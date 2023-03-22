@@ -9,23 +9,31 @@
         </h1>
 
         <?php 
-            //$result_set = User::find_all_users();
-            //while($row = mysqli_fetch_array($result_set)) {
-            //    echo $row['username'] . "<br>";  
-            //}
+            /*
+            $user = new User();
+            $user->username = "Makelele";
+            $user->password = "def_mid";
+            $user->first_name = "Cloud";
+            $user->last_name = "Chealsea";
+            $user->create(); 
+            */
+            $user = User::find_user_by_id(11);
+            $user->username = "LM10";
+            $user->password = "psg";
+            $user->first_name = "Leo";
+            $user->last_name = "Messi";
+            $user->update();
+/*
+            $user = User::find_user_by_id(7);
+            $user->delete();
 
-            //$found_user = User::find_user_by_id(2);
-            //$user = User::instantation($found_user);
-            //echo $user->password;
+            $user = User::find_user_by_id(8);
+            $user->password = "new_password";
+            $user->save();
 
-            //$users = User::find_all_users();
-            //foreach($users as $user) {
-            //    echo $user->username . "<br>";
-            //}
-
-            $found_user = User::find_user_by_id(3);
-            echo $found_user->password;
-
+            $user = new User();
+            $user->username = "Sualve";
+            $user->save(); */
         ?>
 
         <ol class="breadcrumb">
