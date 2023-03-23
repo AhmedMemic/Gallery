@@ -16,7 +16,7 @@
             $user->first_name = "Cloud";
             $user->last_name = "Chealsea";
             $user->create(); 
-            */
+            
             $user = User::find_user_by_id(11);
             $user->username = "LM10";
             $user->password = "psg";
@@ -32,8 +32,18 @@
             $user->save();
 
             $user = new User();
-            $user->username = "Sualve";
-            $user->save(); */
+            $user->username = "TestUser";
+            $user->save(); 
+
+            $photos = Photo::find_all();
+            foreach ($photos as $photo) {
+                echo $photo->description; 
+            } */
+
+            $photo = new Photo();
+            $photo->title = "New Photo";
+            $photo->description = "Photo of mountains";
+            $photo->create(); 
         ?>
 
         <ol class="breadcrumb">
