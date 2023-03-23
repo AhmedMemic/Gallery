@@ -8,26 +8,29 @@
             <small>Subheading</small>
         </h1>
 
-        <?php 
-            /*
+        <?php
+        /*
+            $photo = Photo::find_by_id(7);
+            echo $photo->title;
+            
             $user = new User();
             $user->username = "Makelele";
-            $user->password = "def_mid";
+            $user->password = "middiff";
             $user->first_name = "Cloud";
             $user->last_name = "Chealsea";
             $user->create(); 
             
-            $user = User::find_user_by_id(11);
+            $user = User::find_by_id(11);
             $user->username = "LM10";
             $user->password = "psg";
             $user->first_name = "Leo";
             $user->last_name = "Messi";
             $user->update();
 /*
-            $user = User::find_user_by_id(7);
+            $user = User::find_by_id(7);
             $user->delete();
 
-            $user = User::find_user_by_id(8);
+            $user = User::find_by_id(8);
             $user->password = "new_password";
             $user->save();
 
@@ -38,12 +41,12 @@
             $photos = Photo::find_all();
             foreach ($photos as $photo) {
                 echo $photo->description; 
-            } */
+            } 
 
             $photo = new Photo();
             $photo->title = "New Photo";
             $photo->description = "Photo of mountains";
-            $photo->create(); 
+            $photo->create(); */
         ?>
 
         <ol class="breadcrumb">
