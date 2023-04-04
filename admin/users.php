@@ -51,8 +51,7 @@
                                 <td><?= $user->username ?>
                                     <div class="action_links">
                                         <a href="delete_user.php?id=<?= $user->id ?>">Delete</a>
-                                        <a href="edit_user.php?id=<?= $user->id ?>">Edit</a>
-                                        <a href="#">View</a>
+                                        <a href="edit_user.php?id=<?= $user->id ?>">Edit</a>  
                                     </div>
                                 </td>
                                 <td><?= $user->first_name ?></td>
