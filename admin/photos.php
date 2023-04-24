@@ -41,22 +41,31 @@
                             <th>File Name</th>
                             <th>Title</th>
                             <th>Size</th>
+                            <th>Comments</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($photos as $photo) : ?>
                             <tr>
                                 <td><img class="admin-photo-thumbnail" src="<?= $photo->picture_path() ?>" alt="">
-                                    <div class="pictures_link">
+                                    <div class="action_link">
                                         <a href="delete_photo.php?id=<?= $photo->id ?>">Delete</a>
                                         <a href="edit_photo.php?id=<?= $photo->id ?>">Edit</a>
-                                        <a href="#">View</a>
+                                        <a href="../photo.php?id=<?= $photo->id ?>">View</a>
                                     </div>
                                 </td>
                                 <td><?= $photo->id ?></td>
                                 <td><?= $photo->filename ?></td>
                                 <td><?= $photo->title ?></td>
                                 <td><?= $photo->size ?></td>
+                                <td>
+                                    <a href="comment_photo.php?id=<?= $photo->id ?>">
+                                        <?php 
+                                            $comments = Comment::find_the_comments($photo->id);
+                                            echo count($comments);
+                                        ?>
+                                    </a>
+                                </td>
                             </tr>
                         <?php endforeach ?>
                     </tbody>

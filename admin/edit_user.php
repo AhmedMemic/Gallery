@@ -26,8 +26,6 @@
 
                 redirect("edit_user.php?id={$user->id}");
             }
-
-
         }
     }
 ?>
