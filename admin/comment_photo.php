@@ -37,7 +37,6 @@
             <h1 class="page-header">
                 Comments
             </h1>
-            <a href="add_comment.php" class="btn btn-primary">Add Comment</a>
             <div class="col-md-12">
                 <table class="table table-hover">
                     <thead>
