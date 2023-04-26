@@ -2,3 +2,13 @@
     width: 200px;
     height: 150px !important;
 }
+
+.pager .active a {
+    background-color: #000;
+    color: #FFF;
+}
+
+.pager .active a:hover {
+    background-color: #000;
+    color: #FFF;
+}
