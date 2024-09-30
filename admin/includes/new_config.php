@@ -1,6 +1,6 @@
 <?php 
 
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','gallery_db');
+define('DB_HOST','db');
+define('DB_USER','db');
+define('DB_PASS','db');
+define('DB_NAME','db');

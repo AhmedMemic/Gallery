@@ -29,6 +29,8 @@
         }
     }
 ?>
+    <!-- Photo Library Modal -->
+    <?php include("includes/photo_library_modal.php") ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -52,10 +54,9 @@
         <div class="col-lg-12">
             <h1 class="page-header">
                 Users
-                <small>Subheading</small>
             </h1>
-            <div class="col-md-6">
-                <img class="img-responsive" src="<?= $user->image_path_and_placeholder() ?>" alt="">
+            <div class="col-md-6 user_image_box">
+                <a href="#" data-toggle="modal" data-target="#photo-library"><img class="img-responsive" src="<?= $user->image_path_and_placeholder() ?>" alt=""></a>
             </div>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="col-md-6">
